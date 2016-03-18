@@ -28,8 +28,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 void setup()
 {
-  Serial.begin(115200);
-  SRF.init();
+  Serial.begin(9600);
+  SRF.init(10);
   Serial.println("Started");
 }
 

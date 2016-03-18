@@ -21,7 +21,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // 
 // 
 // 
-#include <avr/_interrupt.h>
+#include <avr/interrupt.h>
 
 #include "SRFSPI.h"
 
@@ -35,8 +35,8 @@ void SRFSPI::init(uint8_t csPin,uint8_t irqPin)
   // setup SPI
   pinMode(SPI_SS,OUTPUT);
   digitalWrite(SPI_SS,HIGH);
-  pinMode(_csPin,OUTPUT);
-  digitalWrite(_csPin,HIGH);
+  //pinMode(_csPin,OUTPUT);
+  //digitalWrite(_csPin,HIGH);
   pinMode(_irqPin,INPUT);
   digitalWrite(_irqPin,LOW);	//disable pullup as we use an external pulldown
   SPI.begin();
